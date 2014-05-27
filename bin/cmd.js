@@ -57,7 +57,9 @@ withConfig(function (config) {
                         'node_js:',
                         vs.map(function (v) {
                             return '  - "' + v.replace(/\.\d+$/, '') + '"';
-                        }).join('\n')
+                        }).join('\n'),
+                        'before_install:',
+                        '  - npm install -g npm@~1.4.6'
                     ].join('\n') + '\n');
                     
                     console.log('# created a .travis.yml');
