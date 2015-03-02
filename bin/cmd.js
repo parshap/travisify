@@ -59,7 +59,7 @@ withConfig(function (config) {
                             return '  - "' + v.replace(/\.\d+$/, '') + '"';
                         }).join('\n'),
                         'before_install:',
-                        '  - npm install -g npm@~1.4.6'
+                        '  - npm install -g npm@2'
                     ].join('\n') + '\n');
                     
                     console.log('# created a .travis.yml');
